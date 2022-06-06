@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body{
+    margin: 0;
+    font-size: 1.4rem;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
+nav{
+    position: sticky;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ba3244;
+    z-index: 10;
+}
+#navbar{
+    display: flex;
+    margin-right: 2rem;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem 1rem;
+}
+#welcome-section{
+    display: flex;
+    text-align: justify;
+    background: rgb(34, 33, 33);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 100px;
+    padding-bottom: 5rem;
+}
+.slider{
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    padding: 0;
+    padding-top: 3rem;
+}
+ul.slider li{
+    position: absolute;
+    opacity: 0;
+    background-color: rgb(34, 33, 33);
+    width: inherit;
+    height: auto;
+    transition: opacity 0.5s;
+}
+ul.slider li:first-child{
+    opacity: 1; 
+}
+ul.slider li:target{
+    opacity: 1;
+}
+li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu{
+    text-align: center;
+    padding-top: 23rem;
+    margin: 20px;
+    position: static;
+}
+.menu li{
+    text-align: center;
+}
+.menu li a{
+    display: inline-block;
+    color: rgb(46, 45, 45);;
+    background-color: rgb(46, 45, 45);
+    padding: 10px;
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    border-radius: 100%;
+}
+#slider1,
+#slider2,
+#slider3,
+#slider4{
+    padding-top: 20rem;
+    padding-left: 2rem;
+}
+/*projects*/
+#projects{
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #3a4e7d;
+}
+#grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    grid-gap: 4rem;
+    height: auto;
+    margin: 4rem 0;
+}
+#grid a{
+    text-align: center;
+    width: inherit;
+    padding: 0;
+    background-color: #303841;
+}
+a img{
+    width: 100%;
+    height: auto;
+}
+button{
+    background-color: #303841;
+    border: 0;
+    font-size: 1.4rem;
+    font-family: 'Lato', sans-serif;
+    padding: 1rem 3rem;
+}
+.links_to p{
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+    word-wrap: break-word;
+}
+/*contact*/
+#findme{
+    background-color: rgb(50, 48, 48);
+    padding-top: 14.5rem;
+    text-align: center;
+    width: 100%;
+    height: 30rem;
+}
+#contact{
+    color: white;
+}
+#social{
+    margin-top: 10rem;
+    padding: 0 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around
+}
+footer{
+    background-color: #ba3244;
+    padding: 0.4rem;
+    text-align: right;
+    border-top: solid white;
+}
+@media(max-width:433px){
+    #navbar{
+        margin-right: 0;
+    }
+    a{
+        padding: 1.5rem 0.1rem;
+    }
+    #projects{
+        padding: 3rem 1rem ;
+    }
+    #grid{
+        grid-template-columns: repeat(auto-fit,minmax(100%,1fr));
+    }
+    #findme{
+        height: auto;
+        padding: 5rem 0;
+    }
+    #social{
+        padding: 0;
+    }
+}
+@media(max-width:286px){
+    #navbar{
+       flex-direction: column;
+    }
+    a{
+        padding: 0;
+    }
+    .menu{
+        display: none;
+    }
+    #slider1,
+    #slider2,
+    #slider3,
+    #slider4{
+        padding-left: 0;
+        word-wrap: break-word;
+    }
+    ul.slider li:target{
+        opacity: 0;
+    }
+    ul.slider li:first-child{
+        opacity: 1; 
+    }
+    #projects{
+        padding: 3rem 0.3rem ;
+    }
+    .project-title{
+        width: 100%;
+        word-wrap: break-word;
+    }
+    button{
+        width: 100%;
+        padding: 0.5rem 0.1rem;
+    }
+    #social{
+        flex-direction: column;
+    }
+}
